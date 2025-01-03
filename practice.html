@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CONTAINER</title>
+<style>
+    body {
+        background-image: url("sin.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        height: 650px;
+        width: 35%;
+        margin: 50px auto; 
+        padding: 20px;
+        background-image: url("back.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 10px;
+    }
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    label {
+        font-size: 25px;
+        margin-bottom: 5px;
+        color: aqua;
+    }
+    input[type="text"] {
+        width: 92%;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+    .gender-group, .date-group {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .submit-btn {
+        margin-top: 20px;
+        padding: 10px;
+        font-size: 18px;
+        color: white;
+        background-color: aqua;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <center><h1 style="color: aqua;">REGISTRATION FORM</h1></center>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter the name">
+
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" placeholder="Enter the Phone Number">
+
+            <label for="email">Email</label>
+            <input type="text" id="email" placeholder="Enter the Email">
+
+            <label for="password">Password</label>
+            <input type="text" id="password" placeholder="Enter the Password">
+
+            <label for="confirm-password">Confirmation Password</label>
+            <input type="text" id="confirm-password" placeholder="Enter confirmation password">
+
+            <label>Gender:</label>
+            <div class="gender-group">
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </div>
+            
+            <label>Event Date:</label>
+            <div class="date-group">
+                <input type="radio" id="date1" name="event-date" value="28/09/2004">
+                <label for="date1">28/09/2004</label>
+                <input type="radio" id="date2" name="event-date" value="29/09/2004">
+                <label for="date2">29/09/2004</label>
+                <input type="radio" id="date3" name="event-date" value="30/09/2004">
+                <label for="date3">30/09/2004</label>
+            </div>
+
+            <button type="submit" class="submit-btn" onclick="register()">Submit</button>
+        </div>
+    </div>
+
+    <script>
+        function register() {
+            alert("Successful registration!");
+        }
+    </script>
+</body>
+</html>
